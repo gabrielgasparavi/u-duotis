@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prekių sandėlis ir krepšelis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Prekių valdymo sistema</h1>
+    <p class="subtitle">JavaScript ir LocalStorage CRUD projektas</p>
+
+    <div class="layout">
+      <section class="panel">
+        <h2>Prekių sandėlis</h2>
+
+        <form id="productForm">
+          <label for="productId">Prekės kodas (ID)</label>
+          <input id="productId" type="text"
+                 placeholder="Įveskite prekės kodą">
+
+          <label for="productName">Prekės pavadinimas</label>
+          <input id="productName" type="text"
+                 placeholder="Įveskite pavadinimą">
+
+          <label for="productQuantity">Kiekis</label>
+          <input id="productQuantity" type="number"
+                 min="1" step="1" placeholder="Įveskite kiekį">
+
+          <div class="buttons">
+            <button type="submit" id="saveBtn">
+              Pridėti prekę
+            </button>
+            <button type="button" id="cancelBtn"
+                    class="secondary">
+              Išvalyti
+            </button>
+          </div>
+        </form>
+
+        <p id="productMessage" class="message" role="status"></p>
+
+        <h3>Sandėlio prekės</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Pavadinimas</th>
+                <th>Kiekis</th>
+                <th>Veiksmai</th>
+              </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Prekių paieška</h2>
+        <label for="searchId">Ieškoti pagal prekės ID</label>
+        <div class="search-row">
+          <input id="searchId" type="text"
+                 placeholder="Prekės kodas">
+          <button type="button" id="searchBtn">
+            Ieškoti
+          </button>
+        </div>
+
+        <p id="searchMessage" class="message" role="status"></p>
+        <div id="searchResult"></div>
+
+        <h2>Pirkinių krepšelis</h2>
+        <form id="cartForm">
+          <label for="cartId">Prekės kodas</label>
+          <input id="cartId" type="text"
+                 placeholder="Prekės ID">
+
+          <label for="cartQuantity">Kiekis</label>
+          <input id="cartQuantity" type="number"
+                 min="1" step="1" value="1">
+
+          <button type="submit">Įdėti į krepšelį</button>
+        </form>
+
+        <p id="cartMessage" class="message" role="status"></p>
+
+        <h3>Krepšelio prekės</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Pavadinimas</th>
+                <th>Kiekis</th>
+                <th>Veiksmai</th>
+              </tr>
+            </thead>
+            <tbody id="cartTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+
+
+</body>
+</html>

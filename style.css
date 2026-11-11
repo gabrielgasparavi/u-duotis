@@ -1,0 +1,164 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #9bdcf5, #ff9d9d);
+  color: #252638;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+h1, .subtitle {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  margin-bottom: 35px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px 0 6px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c6c8d4;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #6366f1;
+}
+
+button {
+  padding: 11px 16px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #4548c8;
+}
+
+.secondary {
+  background: #64748b;
+}
+
+.danger {
+  background: #dc3545;
+}
+
+.danger:hover {
+  background: #b91c1c;
+}
+
+.buttons, .search-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.search-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.message {
+  min-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #d7d7df;
+  text-align: left;
+}
+
+th {
+  background: #e0e7ff;
+}
+
+td button {
+  margin: 3px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+#searchResult {
+  margin: 15px 0;
+}
+
+.found-product {
+  padding: 15px;
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+  }
+}
